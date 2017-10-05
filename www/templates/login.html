@@ -1,0 +1,78 @@
+<ion-view title="Login" hide-nav-bar="true" id="page6">
+  <ion-content padding="true" style="background: url('img/bg.png') no-repeat center;background-size:cover;" class="manual-ios-statusbar-padding">
+      <button class="button button-icon ion-android-arrow-back icon-left" style="color:#fff !important" ng-click="home()"></button>
+    
+      
+    <div>
+      <img src="img/Logo.png" style="display: block; margin-left: auto; margin-right: auto;">
+    </div>
+   
+	<div class="row responsive-sm responsive-md">
+	<div class="col col-25" no-padding></div>
+	<div class="col col-50" no-padding>
+
+        <div class="list" no-padding>
+           
+            <label class="item item-input item-floating-label" style="border-bottom:1px solid rgba(255,255,255,0.2) !important;border-left:none !important;border-right:none !important;border-top:none !important;">
+                <span class="input-label" style="color:#fff !important;">Username</span>
+                <input type="text" placeholder="Username" style="color:#fff !important;" ng-model="user.username" maxlength="10">
+            </label>
+            <label class="item item-input item-floating-label" style="border-bottom:1px solid rgba(255,255,255,0.2) !important;border-left:none !important;border-right:none !important;border-top:none !important;">
+                <span class="input-label" style="color:#fff !important;">Password</span>
+                <input type="password" placeholder="Password" style="color:#fff !important;" ng-model="user.password">
+            </label>
+            <br />
+            
+            <button class="button button-block  ink" data-ink-color="#9DEAFF" data-ink-opacity="1" ng-click="login(user)">
+                Submit
+            </button>
+        </div>
+	 <!--<form id="login-form2" class="list">
+      <label class="item item-input item-stacked-label" id="login-input1">
+        <span class="input-label" style="color:#fff;">Username</span>
+        <input placeholder="" type="text">
+      </label>
+      <label class="item item-input item-stacked-label" id="login-input2" style="margin-top:20px; margin-bottom:20px;">
+        <span class="input-label" style="color:#fff;">Password</span>
+        <input placeholder="" type="password">
+      </label>
+    </form>-->
+   
+       
+  
+    <div id="login-markdown1" style="text-align:center;" class="show-list-numbers-and-dots">
+      <p style="color:#FFFFFF; margin-top:15px;">
+        <button ng-click="join()" class="button button-outline" style="color:#fff;">Join BJP</button> 
+        <button ng-click="forgotpage()" class="button button-outline" style="color:#fff; margin-left:5px;">Forgot Password?</button>
+      </p>
+    </div>
+	</div>
+	<div class="col col-25" no-padding></div>
+	</div>
+     <style>
+          
+          .item-stacked-label input, .item-stacked-label textarea {
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    padding: 4px 8px 0px 0;
+    border-bottom:1px solid rgba(255,255,255,0.5) !important;
+    background:none !important;
+    color:#fff;
+}
+.item-floating-label {
+    display: block;
+    background-color: transparent;
+    box-shadow: none;
+	 border-bottom:1px solid rgba(255,255,255,0.5) !important;
+}
+.input-label {
+    display: table;
+    padding: 7px 10px 7px 0px;
+    max-width: 200px;
+    width: 35%;
+    color: #fff;
+    font-size: 16px;
+}
+      </style>
+  </ion-content>
+</ion-view>

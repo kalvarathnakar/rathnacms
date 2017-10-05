@@ -1,0 +1,11 @@
+<ion-view title="News" id="page2">
+  <ion-content padding="true" class="has-header">
+      <script src="http://rss.bloople.net/?url=http%3A%2F%2Fwww.bjp.org%2F%3Foption%3Dcom_ninjarsssyndicator%26feed_id%3D1%26format%3Draw&showtitle=false&type=js"></script>
+      <div class="card" ng-repeat="list in newsData">
+          <div class="item item-text-wrap">
+              <h3>{{list.name}}</h3>
+              <p>{{list.description}}</p>
+          </div>
+      </div>
+  </ion-content>
+</ion-view>

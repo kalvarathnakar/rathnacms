@@ -1,0 +1,17 @@
+<ion-view title="News" id="page2">
+  <ion-content padding="true" class="has-header">
+     
+      <ul class="list list-data" >
+          <li class="item item-text-wrap" ng-repeat="list in newsData" ng-click="getdata(list.link)"  >
+              <a href=""   >{{list.title}}</a>
+          </li>
+      </ul>
+      <style>
+          .list-data li a{
+              color:#000;
+              text-decoration:none !important;
+              cursor:pointer;
+          }
+      </style>
+  </ion-content>
+</ion-view>

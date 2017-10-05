@@ -1,0 +1,116 @@
+<ion-view title="Manage Roles" id="page10">
+  <ion-content padding="true" class="has-header">
+
+      <div class="row responsive-sm">
+          <div class="col col-20"></div>
+          <div class="col col-60">
+              <div class="row">
+                  <div class="col">
+                      <button class="button button-balanced button-small" style="float:right !important" ng-click="addRole()">Add Roles</button>
+                  </div>
+                 
+              </div>
+              <div class="row header">
+                  <div class="col">Role</div>
+                  <div class="col">Description</div>
+                  <div class="col">Edit</div>
+                  <div class="col">Delete</div>
+
+              </div>
+             
+              <!--<div ng-repeat="n in html" >
+                  {{n.title.rendered}}
+                  <div ng-bind-html="n.content.rendered | to_trusted"></div>
+              </div>-->
+              <div class="row" ng-repeat="data in roles">
+                  <div class="col">{{data.name}}</div>
+                  <div class="col">{{data.description}}</div>
+                  <div class="col" style="text-align:center;font-size:24px; color:#808080" ><button class="button button-positive  button-clear" ng-click="modelpopup(data.id)">edit</button> </div>
+                  <div class="col" style="text-align:center;font-size:24px; color:#808080"><button class="button button-assertive  button-clear" ng-click="delete(data.id)">Delete</button> </div>
+
+              </div>
+          </div>
+          <div class="col col-20"></div>
+      </div>
+      <style>
+          .button-bg {
+              /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8be41b+0,4faa0b+100 */
+              background: #8be41b !important; /* Old browsers */
+              background: -moz-linear-gradient(top, #8be41b 0%, #4faa0b 100%) !important; /* FF3.6-15 */
+              background: -webkit-linear-gradient(top, #8be41b 0%,#4faa0b 100%) !important; /* Chrome10-25,Safari5.1-6 */
+              background: linear-gradient(to bottom, #8be41b 0%,#4faa0b 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+              filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8be41b', endColorstr='#4faa0b',GradientType=0 ) !important; /* IE6-9 */
+              border-bottom: 2px solid #406f05;
+              color: #fff;
+              font-weight: 600;
+          }
+
+          .header .col {
+              background-color: #71a823;
+              color: #fff !important;
+          }
+
+        .header  .col {
+              border: solid 1px grey;
+              border-bottom-style: none;
+              border-right-style: none;
+          }
+
+             .header .col:last-child {
+                  border-right: solid 1px grey;
+              }
+
+         .header .row:last-child .col {
+              border-bottom: solid 1px grey;
+          }
+      </style>
+
+
+      <script id="modal.html" type="text/ng-template">
+          <div class="modal">
+              <ion-header-bar class="bar-stable1 bar-stable">
+                  <h1 class="title">Booth Worker Profile</h1>
+                  <div class="button button-clear" ng-click="modal.hide()"><span class="icon ion-close"></span></div>
+
+              </ion-header-bar>
+              <ion-content>
+                  <div class="row responsive-sm">
+                      <div class="col-10"></div>
+                      <div class="col-80">
+                          <form novalidate name="MemberRegistration" >
+                              <div class="list">
+
+                                  <label class="item item-input item-stacked-label">
+                                      <span class="input-label" style="color:#000"><span style="color:red">*</span>Role Name</span>
+                                      <input type="text" placeholder="Enter your name" style="color:#000;background:none !important;" ng-model="rg.role" text-only name="role" ng-minlength="2" required>
+                                  </label>
+
+                                  <span ng-show="MemberRegistration.role.$touched && MemberRegistration.role.$invalid" style="color:darkred">Name is required and should be minimum two letters.</span>
+
+                                  <label class="item item-input item-stacked-label">
+                                      <span class="input-label" style="color:#000"><span style="color:red">*</span>Description</span>
+                                      <textarea type="text" style="color:#000;background:none !important;" text-only ng-model="rg.description" name="description" required></textarea>
+                                  </label>
+                                  <span ng-show="MemberRegistration.description.$touched && MemberRegistration.description.$invalid" style="color:darkred">Surname is required and should be minimum one letter</span>
+
+                                 
+                                  <ion-checkbox ng-model="order[asset.id]" ng-repeat="asset in assets" ng-change="format()">{{asset.name}} </ion-checkbox>
+                                 
+                                 
+                                  <button id="registration-button1" style="border-radius:5px 5px 5px 5px;background:#43ae0b  !important" class="button button-energized button-block" ng-disabled="MemberRegistration.$invalid" ng-click="update(rg)" ng-if="form=='update'">Update</button>
+                                  <button id="registration-button1" style="border-radius:5px 5px 5px 5px;background:#43ae0b  !important" class="button button-energized button-block" ng-disabled="MemberRegistration.$invalid" ng-click="submit(rg)" ng-if="form=='add'">Submit</button>
+                              </div>
+
+                              </form>
+
+
+</div>
+                      <div class="col-10"></div>
+                  </div>
+              </ion-content>
+
+          </div>
+      </script>
+
+  </ion-content>
+</ion-view>

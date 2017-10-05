@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    
+    
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+     
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+      
+
+    <style type="text/css">
+      .platform-ios .manual-ios-statusbar-padding{
+        padding-top:20px;
+      }
+      .manual-remove-top-padding{
+        padding-top:0px; 
+      }
+      .manual-remove-top-padding .scroll{
+        padding-top:0px !important;
+      }
+      ion-list.manual-list-fullwidth div.list, .list.card.manual-card-fullwidth {
+        margin-left:-10px;
+        margin-right:-10px;
+      }
+      ion-list.manual-list-fullwidth div.list > .item, .list.card.manual-card-fullwidth > .item {
+        border-radius:0px;
+        border-left:0px;
+        border-right: 0px;
+      }
+      .show-list-numbers-and-dots ul{
+        list-style-type: disc;
+        padding-left:40px;
+      }
+      .show-list-numbers-and-dots ol{
+        list-style-type: decimal;
+        padding-left:40px;
+      }
+    </style>
+
+      <script src="js/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/routes.js"></script>
+        
+    <script src="js/directives.js"></script>
+    <script src="js/services.js"></script>
+      <script src="lib/file-upload/angular-fileupload.js"></script>
+     
+      <script src="lib/ngStorage/ngStorage.min.js"></script>
+      <style>
+          .bar-stable1{
+              border-bottom:2px solid #94635d !important; 
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e15208+0,fe8a08+100 */
+background: #e15208 !important; /* Old browsers */
+background: -moz-linear-gradient(top, #e15208 0%, #fe8a08 100%) !important; /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #e15208 0%,#fe8a08 100%) !important; /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #e15208 0%,#fe8a08 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e15208', endColorstr='#fe8a08',GradientType=0 ) !important; /* IE6-9 */
+          }
+
+          .title{
+              color:#fff !important;
+          }
+      </style>
+    <!-- Only required for Tab projects w/ pages in multiple tabs 
+    <script src="lib/ionicuirouter/ionicUIRouter.js"></script>
+    -->
+
+  </head>
+  <body ng-app="app" animation="slide-left-right-ios7">
+  <div>
+  <div>
+    <ion-nav-bar class="bar-stable1 bar-stable" style="">
+      <ion-nav-back-button></ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-view></ion-nav-view>
+  </div>
+</div>
+  </body>
+</html>

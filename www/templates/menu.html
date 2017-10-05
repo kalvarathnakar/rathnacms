@@ -1,0 +1,51 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-stable1 bar-stable" >
+      <ion-nav-back-button></ion-nav-back-button>
+      <ion-nav-buttons side="left" >
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+      </ion-nav-buttons>
+        <!--<ion-nav-buttons side="right">
+            <button class="button button-icon button-clear ion-android-more-vertical" id="menu-popover" ng-click="popover.show($event)"></button>
+        </ion-nav-buttons>-->
+    </ion-nav-bar>
+    <ion-nav-view name="side-menu21"></ion-nav-view>
+  </ion-side-menu-content>
+  <ion-side-menu side="left" id="side-menu21">
+    <ion-header-bar class="bar-stable1 bar-stable">
+      <div class="title">Menu</div>
+    </ion-header-bar>
+    <ion-content padding="false" class="side-menu-left has-header "  style="/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#86c931+0,67981c+100 */
+background: #86c931; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover, #86c931 0%, #67981c 100%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover, #86c931 0%,#67981c 100%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center, #86c931 0%,#67981c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#86c931', endColorstr='#67981c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */ border-left:2px solid #5c9011 !important">
+        <img src="img/Logo.png" class="col-center" style="width: 120px;
+height: 120px;
+margin-left: 71px;"/>
+
+          <ion-list id="menu-list1" style="background:none !important;" class="listofitem">
+              <ion-item id="menu-list-item3" ui-sref="menu.home()" ng-if="loginresult=='0'" menu-close="" style="background:none !important;">Home</ion-item>
+        <ion-item id="menu-list-item1" ui-sref="menu.registration()" menu-close="" style="background:none !important;" ng-click="registration()" ng-if="loginresult=='0'">Join Booth Committee</ion-item>
+        <ion-item id="menu-list-item2" ng-if="loginresult=='0'" ui-sref="menu.cart()" ng-click="getNews()" menu-close="" style="background:none !important;">News</ion-item>
+              <ion-item id="menu-list-item4" ui-sref="menu.login()" menu-close="" style="background:none !important;" ng-if="loginresult=='0'" ng-click="loginpage()">Login</ion-item>
+              <ion-item id="menu-list-item4" ui-sref="menu.homeforlogin()" menu-close="" style="background:none !important;" ng-if="loginresult=='membership'">Home</ion-item>
+              <ion-item id="menu-list-item4" ui-sref="menu.myaccount()" menu-close="" style="background:none !important;" ng-if="loginresult=='membership'" ng-click="myAccount()">My Profile</ion-item>
+              <ion-item id="menu-list-item4" ui-sref="menu.changepassword()"  menu-close="" style="background:none !important;" ng-if="loginresult=='membership'" ng-click="changePassword()">Change Password</ion-item>
+              <ion-item id="menu-list-item4" ui-sref="menu.changemobilenumber()" menu-close="" style="background:none !important;" ng-if="loginresult=='membership'" ng-click="changeMobileNumber()">Change Mobile Number</ion-item>
+              <ion-item id="menu-list-item4"  menu-close="" style="background:none !important;color:#fff !important;" ng-click="logout()" ng-if="loginresult=='membership'">Logout</ion-item>
+
+              <ion-item id="menu-list-item4" ui-sref="menu.superadmin()" menu-close="" style="background:none !important;" ng-if="loginresult=='administration'">Home</ion-item>
+              
+              <ion-item id="menu-list-item4" menu-close="" style="background:none !important;" ng-click="logout()" ng-if="loginresult=='administration'">Logout</ion-item>
+      </ion-list>
+    </ion-content>
+      <style>
+          .listofitem .list .item >a.item-content{
+              background:none !important;
+              color:#fff;
+          }
+      </style>
+  </ion-side-menu>
+</ion-side-menus>

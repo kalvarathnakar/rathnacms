@@ -1,0 +1,175 @@
+<ion-view title="Reports" id="page9"  >
+  <ion-content padding="true" class="has-header">
+      <div class="row">
+          <div class="col col-20">
+              <label class="item item-input item-select">
+                  <span class="input-label" style="color:#000">District</span>
+                  <select ng-model="rg.ditrict" name="idproof" style="color:#000;background:none !important;" ng-change="getAssembly(rg)" required>
+                      <option value=""> Select</option>
+                      <option ng-repeat="list in district" value="{{list.id}}">{{list.name}}</option>
+
+
+                  </select>
+              </label>
+
+          </div>
+          <div class="col col-20">
+              <label class="item item-input item-select" ng-if="showassembly">
+                  <span class="input-label" style="color:#000">Assembly</span>
+                  <select ng-model="rg.assembly" name="idproof" style="color:#000;background:none !important;" ng-change="getMandals(rg)" required>
+                      <option value=""> Select</option>
+                      <option ng-repeat="list in assemblies" value="{{list.id}}">{{list.name}}</option>
+
+
+                  </select>
+              </label>
+          </div>
+          
+          <div class="col col-20">
+              <label class="item item-input item-select" ng-if="showMandal">
+                  <span class="input-label" style="color:#000">Mandal</span>
+                  <select ng-model="rg.mandal" name="idproof" style="color:#000;background:none !important;" ng-change="getVillages(rg)" required>
+                      <option value=""> Select</option>
+                      <option ng-repeat="list in mandals" value="{{list.id}}">{{list.name}}</option>
+
+
+                  </select>
+              </label>
+          </div>
+          <div class="col col-20">
+              <label class="item item-input item-select" ng-if="showUpaMandal">
+                  <span class="input-label" style="color:#000">Upa Mandal</span>
+                  <select ng-model="rg.village" name="idproof" style="color:#000;background:none !important;" ng-change="getBooths(rg)" required>
+                      <option value=""> Select</option>
+                      <option ng-repeat="list in villages" value="{{list.id}}">{{list.name}}</option>
+
+
+                  </select>
+              </label>
+          </div>
+          <div class="col col-20">
+              <label class="item item-input item-select" ng-if="showBooth">
+                  <span class="input-label" style="color:#000">Booth</span>
+                  <select ng-model="rg.booths" name="idproof" style="color:#000;background:none !important;" ng-change="getBoothNumber(rg)" required>
+                      <option value=""> Select</option>
+                      <option ng-repeat="list in booths" value="{{list.id}}">{{list.name}}</option>
+
+
+                  </select>
+              </label>
+          </div>
+        
+      </div>
+
+                   
+              
+              
+              
+              
+
+
+      <!--<div class="card" ng-repeat="data in listview | filter:search" ng-click="modelpopup(data)">
+          <div class="item  item-icon-right">
+              
+             
+              <i class="icon ion-chevron-right"></i>
+              <p><strong>Booth Worker Name :</strong> {{data.name}}}</p>
+              <p><strong>Membership ID :</strong> {{data.name}}}</p>
+             
+          </div>
+
+      </div>-->
+      <div class="row header">
+          <div class="col">BW Name</div>
+          <div class="col">Membership ID</div>
+          <div class="col">Profile</div>
+         
+      </div>
+      <div class="row" ng-repeat="data in listview">
+          <div class="col">{{data.name}}</div>
+          <div class="col">{{data.membership_id}}</div>
+          <div class="col" style="text-align:center;font-size:24px; color:#808080"><i class="icon  ion-ios-contact" ng-click="modelpopup(data)"></i> </div>
+         
+         
+      </div>
+      <script id="modal.html" type="text/ng-template">
+          <div class="modal">
+              <ion-header-bar class="bar-stable1 bar-stable" >
+                  <h1 class="title">Booth Worker Profile</h1>
+                  <div class="button button-clear" ng-click="modal.hide()"><span class="icon ion-close"></span></div>
+
+              </ion-header-bar>
+              <ion-content>
+                  <div class="row responsive-sm">
+                      <div class="col-10"></div>
+                      <div class="col-80">
+
+                          <div class="list single">
+                              
+                              <div class="item">
+                                  <div class="row row-wrap">
+                                      <div class="col-60">Name</div>
+                                      <div class="col-60">{{lists.name}} {{lists.surname}}</div>
+                                  </div>
+                              </div>
+                              <div class="item">
+                                  <div class="row row-wrap">
+                                      <div class="col-60">  Contact Number</div>
+                                      <div class="col-60">{{lists.moble_number}}</div>
+                                  </div>
+
+                              </div>
+                              <div class="item">
+                                  <div class="row row-wrap">
+                                      <div class="col-60"> Membership ID</div>
+                                      <div class="col-60">{{lists.membership_id}}</div>
+                                  </div>
+
+                              </div>
+                             
+
+
+                          </div>
+
+
+
+                      </div>
+                      <div class="col-10"></div>
+                  </div>
+              </ion-content>
+              
+          </div>
+      </script>
+
+  </ion-content>
+    
+
+    <style>
+        .button-bg{
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8be41b+0,4faa0b+100 */
+background: #8be41b !important; /* Old browsers */
+background: -moz-linear-gradient(top, #8be41b 0%, #4faa0b 100%) !important; /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #8be41b 0%,#4faa0b 100%) !important; /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #8be41b 0%,#4faa0b 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8be41b', endColorstr='#4faa0b',GradientType=0 ) !important; /* IE6-9 */ border-bottom:2px solid #406f05; color:#fff; font-weight:600;
+        }
+        .header .col {
+    background-color:#71a823;
+    color:#fff !important;
+}
+
+.col {
+    border: solid 1px grey;
+    border-bottom-style: none;
+    border-right-style: none;
+}
+
+.col:last-child {
+    border-right: solid 1px grey;
+}
+
+.row:last-child .col {
+    border-bottom: solid 1px grey;
+}
+    </style>
+</ion-view>

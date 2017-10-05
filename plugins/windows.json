@@ -1,0 +1,36 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "cmsapp"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "cmsapp"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "cmsapp"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "cmsapp"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "cmsapp"
+        },
+        "cordova-sqlite-storage": {
+            "PACKAGE_NAME": "cmsapp"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "cmsapp"
+        },
+        "phonegap-plugin-barcodescanner": {
+            "PACKAGE_NAME": "cmsapp"
+        }
+    },
+    "dependent_plugins": {}
+}
